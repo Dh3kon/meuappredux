@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
 
-class ListaPacotes extends Component {
+export default class ListaPacotes extends Component {
   static propTypes = {
     pacotes: PropTypes.array.isRequired
   };
@@ -23,16 +21,3 @@ class ListaPacotes extends Component {
     );
   }
 }
-
-const mapStateToProps = (state, ownProps) => ({
-  pacotes: state.pacote
-});
-
-const mapDispatchToProps = (dispatch, ownProps) => {
-  return bindActionCreators({}, dispatch);
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ListaPacotes);
