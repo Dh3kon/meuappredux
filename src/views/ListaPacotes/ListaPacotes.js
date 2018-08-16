@@ -10,6 +10,10 @@ export default class ListaPacotes extends Component {
     pacotes: []
   };
 
+  componentDidMount() {
+    this.props.getTodosOsPacotes();
+  }
+
   render() {
     const { pacotes } = this.props;
 
