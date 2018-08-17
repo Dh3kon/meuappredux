@@ -12,3 +12,9 @@ export const getTodosOsPacotes = () => {
     api.getTodosOsPacotes().then(payload => dispatch(adicionaPacote(payload)));
   };
 };
+
+export const getPacoteById = id => {
+  return dispatch => {
+    api.getPacoteById(id).then(payload => dispatch(adicionaPacote(payload)));
+  };
+};

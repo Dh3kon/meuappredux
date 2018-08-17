@@ -21,7 +21,9 @@ export default class ListaPacotes extends Component {
     return (
       <div>
         {pacotes.map((detalhes, index) => (
-          <CardPacote {...{ detalhes }} />
+          <a key={index} href={`/${detalhes.id}`}>
+            <CardPacote {...{ detalhes }} />
+          </a>
         ))}
       </div>
     );
