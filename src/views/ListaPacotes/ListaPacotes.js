@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import { CardPacote } from "../../components";
 
 export default class ListaPacotes extends Component {
   static propTypes = {
@@ -7,7 +8,7 @@ export default class ListaPacotes extends Component {
   };
 
   static defaultProps = {
-    pacotes: []
+    // pacotes: []
   };
 
   componentDidMount() {
@@ -19,8 +20,9 @@ export default class ListaPacotes extends Component {
 
     return (
       <div>
-        <p>Test</p>
-        <pre>{JSON.stringify(pacotes, undefined, 2)}</pre>
+        {pacotes.map((detalhes, index) => (
+          <CardPacote {...{ detalhes }} />
+        ))}
       </div>
     );
   }

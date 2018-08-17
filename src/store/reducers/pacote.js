@@ -1,13 +1,6 @@
 import { ADD_PACOTE } from "../actions";
 
-const initialState = [
-  {
-    id: 1,
-    nome: "exemplo"
-  }
-];
-
-export default function pacote(state = initialState, action) {
+export default function pacote(state = [], action) {
   switch (action.type) {
     case ADD_PACOTE:
       return state.concat(action.payload);

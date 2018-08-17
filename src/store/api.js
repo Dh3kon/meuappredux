@@ -1,9 +1,11 @@
 export function getTodosOsPacotes() {
-  return fetch("http://devup.com.br/gotour/api/pacotes").then(t => T.json());
+  return fetch("https://apigotour.herokuapp.com/api/pacotes").then(T =>
+    T.json()
+  );
 }
 
 export function getPacoteById(id) {
-  return fetch(`http://devup.com.br/gotour/api/pacote/${id}/detalhes`)
+  return fetch(`https://apigotour.herokuapp.com/api/pacote/${id}/detalhes`)
     .then(T => T.json())
     .then(T => ({ ...T.pacote, ...T }));
 }
